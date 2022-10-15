@@ -1467,7 +1467,7 @@ void Bot::findPath (int srcIndex, int destIndex, FindPath pathType /*= FindPath:
       // safes us from bad graph...
       if (m_routeQue.length () >= graph.getMaxRouteLength () - 1) {
          logger.error ("A* Search for bot \"%s\" has tried to build path with at least %d nodes. Seems to be graph is broken.", pev->netname.chars (), m_routeQue.length ());
-
+ 
          kick (); // kick the bot off...
          return;
       }
