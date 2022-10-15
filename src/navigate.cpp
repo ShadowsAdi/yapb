@@ -1406,7 +1406,7 @@ void Bot::findPath (int srcIndex, int destIndex, FindPath pathType /*= FindPath:
 
    // astar needs some nodes to work with
    if (graph.length () < kMaxNodeLinks) {
-      logger.error ("A* Search for bot \"%s\" has failed due to too small number of nodes (%d). Seems to be graph is broken.", pev->netname.chars (), graph.length ());
+      //logger.error ("A* Search for bot \"%s\" has failed due to too small number of nodes (%d). Seems to be graph is broken.", pev->netname.chars (), graph.length ());
       return;
    }
 
@@ -1520,7 +1520,7 @@ void Bot::findPath (int srcIndex, int destIndex, FindPath pathType /*= FindPath:
          }
       }
    }
-   logger.error ("A* Search for bot \"%s\" has failed. Falling back to shortest-path algorithm. Seems to be graph is broken.", pev->netname.chars ());
+   //logger.error ("A* Search for bot \"%s\" has failed. Falling back to shortest-path algorithm. Seems to be graph is broken.", pev->netname.chars ());
 
    // fallback to shortest path
    findShortestPath (srcIndex, destIndex); // A* found no path, try floyd pathfinder instead
